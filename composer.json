@@ -1,6 +1,7 @@
 {
     "name": "ofertix/security-extra",
     "type": "symfony-bundle",
+    "description": "Provides @Role and @Param annotations for securing controllers",
     "license": "MIT",
     "require": {
         "doctrine/annotations": "~1.0",
