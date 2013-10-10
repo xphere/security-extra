@@ -12,6 +12,10 @@ class Param
 
     public function __construct(array $values)
     {
+        if (isset($values['value'])) {
+            $values['roles'] = $values['value'];
+        }
+
         if (!isset($values['name'])) {
             throw new \InvalidArgumentException(
                 'You must define a "name" attribute for each @Param annotation.'
