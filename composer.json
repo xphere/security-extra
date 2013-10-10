@@ -3,6 +3,7 @@
     "type": "symfony-bundle",
     "license": "MIT",
     "require": {
+        "doctrine/annotations": "~1.0",
         "symfony/dependency-injection": "~2.0"
     },
     "autoload": {
