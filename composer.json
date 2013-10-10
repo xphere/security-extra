@@ -1,0 +1,8 @@
+{
+    "name": "ofertix/security-extra",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "autoload": {
+        "psr-0": { "Ofertix\\SecurityExtraBundle": "src" }
+    }
+}
