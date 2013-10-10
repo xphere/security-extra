@@ -11,5 +11,10 @@
     },
     "autoload": {
         "psr-0": { "Ofertix\\SecurityExtraBundle": "src" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     }
 }
