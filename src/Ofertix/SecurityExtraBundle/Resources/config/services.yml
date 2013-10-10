@@ -1,0 +1,12 @@
+parameters:
+    ofertix_security_extra.listener.class: Ofertix\SecurityExtraBundle\Security\ControllerListener
+
+services:
+    ofertix_security_extra.listener:
+        class: %ofertix_security_extra.listener.class%
+        arguments:
+            - @annotation_reader
+            - @security.context
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onRole }
+            - { name: kernel.event_listener, event: kernel.controller, method: onParam, priority: -10 }
