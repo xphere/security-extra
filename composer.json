@@ -2,6 +2,9 @@
     "name": "ofertix/security-extra",
     "type": "symfony-bundle",
     "license": "MIT",
+    "require": {
+        "symfony/dependency-injection": "~2.0"
+    },
     "autoload": {
         "psr-0": { "Ofertix\\SecurityExtraBundle": "src" }
     }
