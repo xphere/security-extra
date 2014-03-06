@@ -1,5 +1,6 @@
 parameters:
     ofertix_security_extra.listener.class: Ofertix\SecurityExtraBundle\Security\ControllerListener
+    ofertix_security_extra.param_converter.user.class: Ofertix\SecurityExtraBundle\ParamConverter\UserParamConverter
 
 services:
     ofertix_security_extra.listener:
@@ -10,3 +11,10 @@ services:
         tags:
             - { name: kernel.event_listener, event: kernel.controller, method: onRole }
             - { name: kernel.event_listener, event: kernel.controller, method: onParam, priority: -10 }
+
+    ofertix_security_extra.param_converter.user:
+        class: %ofertix_security_extra.param_converter.user.class%
+        arguments:
+            - @security.context
+        tags:
+            - { name: request.param_converter, priority: 100 }
