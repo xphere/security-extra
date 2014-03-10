@@ -24,6 +24,8 @@ class UserParamConverter implements ParamConverterInterface
         $user = $this->securityContext->getToken()->getUser();
         if ($user) {
             $request->attributes->set($configuration->getName(), $user);
+
+            return true;
         }
     }
 
